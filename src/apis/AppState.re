@@ -14,19 +14,5 @@ external addEventListener:
     | `memoryWarning(unit => unit)
   ]
   ) =>
-  unit =
+  EventSubscription.t =
   "addEventListener";
-
-[@bs.scope "AppState"] [@bs.module "react-native"]
-external removeEventListener:
-  (
-  [@bs.string]
-  [
-    | `change(t => unit)
-    | `focus(unit => unit)
-    | `blur(unit => unit)
-    | `memoryWarning(unit => unit)
-  ]
-  ) =>
-  unit =
-  "removeEventListener";
